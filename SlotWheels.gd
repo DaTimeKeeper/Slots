@@ -15,7 +15,7 @@ var IconFrames = [2,0,14,12,10,8,6,4]
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$HiddenBank.text = str(hiddenBank)
-	$MoneyLabel.text = str(moneyValue)
+	$MoneyLabel.text = "$"+str(moneyValue)
 	pass # Replace with function body.
 
 
@@ -68,8 +68,18 @@ func _on_button_pressed():
 		if WheelOneValue == WheelTwoValue && WheelOneValue == WheelThreeValue:
 			moneyValue += WeightValues[WheelOneValue-1]
 			hiddenBank -= WeightValues[WheelOneValue-1]
-			$Win.text=str(WeightValues[WheelOneValue-1])
+			$Win.text="+$"+str(WeightValues[WheelOneValue-1])
+			$Win.set("theme_override_colors/font_color", Color(0, 1, 0))
 		else:
-			$Win.text="-10"
+			$Win.text="-$10"
+			$Win.set("theme_override_colors/font_color", Color(1, 0, 0))
 	$HiddenBank.text = str(hiddenBank)
-	$MoneyLabel.text = str(moneyValue)
+	$MoneyLabel.text = "$"+str(moneyValue)
+
+
+func _on_reset_button_pressed():
+	moneyValue = 1000
+	hiddenBank = 0
+	$HiddenBank.text = str(hiddenBank)
+	$MoneyLabel.text = "$"+str(moneyValue)
+	$Win.text=""

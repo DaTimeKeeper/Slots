@@ -114,16 +114,17 @@ text = "Spin!"
 
 [node name="MoneyLabel" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = 0.39
-anchor_top = 0.104
-anchor_right = 0.39
-anchor_bottom = 0.104
-offset_left = 259.72
-offset_top = -43.392
-offset_right = 299.72
-offset_bottom = 23.608
+anchor_left = 0.615
+anchor_top = 0.089
+anchor_right = 0.615
+anchor_bottom = 0.089
+offset_left = -60.48
+offset_top = -33.672
+offset_right = 33.52
+offset_bottom = 33.328
 theme_override_font_sizes/font_size = 48
-text = "0"
+text = "$0"
+horizontal_alignment = 2
 
 [node name="HiddenBank" type="Label" parent="."]
 anchors_preset = -1
@@ -131,28 +132,42 @@ anchor_left = 0.635
 anchor_top = 0.234
 anchor_right = 0.635
 anchor_bottom = 0.234
-offset_left = -22.5201
-offset_top = 69.368
-offset_right = 17.4799
-offset_bottom = 136.368
-theme_override_colors/font_color = Color(0, 1, 0, 1)
+offset_left = 336.48
+offset_top = 434.368
+offset_right = 376.48
+offset_bottom = 501.368
+theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_font_sizes/font_size = 48
 text = "0
 "
 
 [node name="Win" type="Label" parent="."]
 anchors_preset = -1
-anchor_left = 0.635
-anchor_top = 0.644
-anchor_right = 0.635
-anchor_bottom = 0.644
-offset_left = -17.5201
-offset_top = -35.312
-offset_right = 22.4799
-offset_bottom = 31.688
+anchor_left = 0.63
+anchor_top = 0.174
+anchor_right = 0.637
+anchor_bottom = 0.174
+offset_left = -72.7601
+offset_top = -16.752
+offset_right = 11.176
+offset_bottom = 50.248
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 48
-text = "0
-"
+horizontal_alignment = 2
+
+[node name="ResetButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.5
+offset_top = 284.0
+offset_right = 25.5
+offset_bottom = 315.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Reset"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
