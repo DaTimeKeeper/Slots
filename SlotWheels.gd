@@ -58,24 +58,16 @@ func RandomSymbolExcludeWheelOne():
 
 
 func _on_button_pressed():
-	if moneyValue-10>=0:
+	if moneyValue-10>=0 && $Wheel3/Timer.time_left <= 0:
 		hiddenBank+=10
 		moneyValue-=10
-		SpinWheels() 
-		$Wheel1/AnimatedSprite2D.frame=IconFrames[WheelOneValue-1]
-		$Wheel2/AnimatedSprite2D.frame=IconFrames[WheelTwoValue-1]
-		$Wheel3/AnimatedSprite2D.frame=IconFrames[WheelThreeValue-1]
-		if WheelOneValue == WheelTwoValue && WheelOneValue == WheelThreeValue:
-			moneyValue += WeightValues[WheelOneValue-1]
-			hiddenBank -= WeightValues[WheelOneValue-1]
-			$Win.text="+$"+str(WeightValues[WheelOneValue-1])
-			$Win.set("theme_override_colors/font_color", Color(0, 1, 0))
-		else:
-			$Win.text="-$10"
-			$Win.set("theme_override_colors/font_color", Color(1, 0, 0))
-	$HiddenBank.text = str(hiddenBank)
-	$MoneyLabel.text = "$"+str(moneyValue)
-
+		$Wheel1/AnimatedSprite2D.play("spin")
+		$Wheel1/Timer.start()
+		$Wheel2/AnimatedSprite2D.play("spin")
+		$Wheel2/Timer.start()
+		$Wheel3/AnimatedSprite2D.play("spin")
+		$Wheel3/Timer.start()
+		SpinWheels()
 
 func _on_reset_button_pressed():
 	moneyValue = 1000
@@ -83,3 +75,25 @@ func _on_reset_button_pressed():
 	$HiddenBank.text = str(hiddenBank)
 	$MoneyLabel.text = "$"+str(moneyValue)
 	$Win.text=""
+	
+func _on_Wheel3_timer_timeout():
+	$Wheel3/AnimatedSprite2D.stop()
+	$Wheel3/AnimatedSprite2D.frame=IconFrames[WheelThreeValue-1]
+	if WheelOneValue == WheelTwoValue && WheelOneValue == WheelThreeValue:
+		moneyValue += WeightValues[WheelOneValue-1]
+		hiddenBank -= WeightValues[WheelOneValue-1]
+		$Win.text="+$"+str(WeightValues[WheelOneValue-1])
+		$Win.set("theme_override_colors/font_color", Color(0, 1, 0))
+	else:
+		$Win.text="-$10"
+		$Win.set("theme_override_colors/font_color", Color(1, 0, 0))
+	$HiddenBank.text = str(hiddenBank)
+	$MoneyLabel.text = "$"+str(moneyValue)
+
+func _on_Wheel2_timer_timeout():
+	$Wheel2/AnimatedSprite2D.stop()
+	$Wheel2/AnimatedSprite2D.frame=IconFrames[WheelTwoValue-1]
+
+func _on_Wheel1_timer_timeout():
+	$Wheel1/AnimatedSprite2D.stop()
+	$Wheel1/AnimatedSprite2D.frame=IconFrames[WheelOneValue-1]

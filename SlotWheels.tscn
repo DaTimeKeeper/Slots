@@ -70,7 +70,7 @@ animations = [{
 "texture": ExtResource("16_62jab")
 }],
 "loop": true,
-"name": &"default",
+"name": &"spin",
 "speed": 16.0
 }]
 
@@ -83,6 +83,11 @@ script = ExtResource("1_owa85")
 position = Vector2(146, 310)
 scale = Vector2(0.0731481, 0.151042)
 sprite_frames = SubResource("SpriteFrames_043vx")
+animation = &"spin"
+
+[node name="Timer" type="Timer" parent="Wheel1"]
+wait_time = 0.5
+one_shot = true
 
 [node name="Wheel2" type="StaticBody2D" parent="."]
 
@@ -90,6 +95,11 @@ sprite_frames = SubResource("SpriteFrames_043vx")
 position = Vector2(343, 308)
 scale = Vector2(0.0731481, 0.151042)
 sprite_frames = SubResource("SpriteFrames_043vx")
+animation = &"spin"
+
+[node name="Timer" type="Timer" parent="Wheel2"]
+wait_time = 0.7
+one_shot = true
 
 [node name="Wheel3" type="StaticBody2D" parent="."]
 
@@ -97,6 +107,10 @@ sprite_frames = SubResource("SpriteFrames_043vx")
 position = Vector2(544, 310)
 scale = Vector2(0.0731481, 0.151042)
 sprite_frames = SubResource("SpriteFrames_043vx")
+animation = &"spin"
+
+[node name="Timer" type="Timer" parent="Wheel3"]
+one_shot = true
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 8
@@ -169,5 +183,8 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Reset"
 
+[connection signal="timeout" from="Wheel1/Timer" to="." method="_on_Wheel1_timer_timeout"]
+[connection signal="timeout" from="Wheel2/Timer" to="." method="_on_Wheel2_timer_timeout"]
+[connection signal="timeout" from="Wheel3/Timer" to="." method="_on_Wheel3_timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
