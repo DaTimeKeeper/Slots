@@ -4,11 +4,13 @@ var WheelTwoValue=0
 var WheelThreeValue=0
 var rng = RandomNumberGenerator.new()
 
+var Credit = 10
+
 var hiddenBank = 0
 
 var moneyValue=1000
 
-var WeightValues = [10,20,10,20,50,100,300,1000]
+var WeightValues = [2,4,2,4,8,10,30,100]
 
 var IconFrames = [2,0,14,12,10,8,6,4]
 
@@ -39,7 +41,7 @@ func SpinSecondWheel():
 	WheelTwoValue =  RandomSymbolExcludeWheelOne()
 	
 func SpinThirdWheel():
-	var weigtedBank=(hiddenBank/(WeightValues[WheelOneValue-1]))*100
+	var weigtedBank=(hiddenBank/(WeightValues[WheelOneValue-1]*Credit))*100
 	var winRoll = rng.randi_range(1,100)
 	if winRoll<=weigtedBank || rng.randi_range(1,100)<=10:
 		WheelThreeValue = WheelOneValue
@@ -59,8 +61,10 @@ func RandomSymbolExcludeWheelOne():
 
 func _on_button_pressed():
 	if moneyValue-10>=0 && $Wheel3/Timer.time_left <= 0:
-		hiddenBank+=10
-		moneyValue-=10
+		hiddenBank+=Credit
+		moneyValue-=Credit
+		$MoneyLabel.text = "$"+str(moneyValue)
+		$HiddenBank.text = str(hiddenBank)
 		$Wheel1/AnimatedSprite2D.play("spin")
 		$Wheel1/Timer.start()
 		$Wheel2/AnimatedSprite2D.play("spin")
@@ -80,12 +84,12 @@ func _on_Wheel3_timer_timeout():
 	$Wheel3/AnimatedSprite2D.stop()
 	$Wheel3/AnimatedSprite2D.frame=IconFrames[WheelThreeValue-1]
 	if WheelOneValue == WheelTwoValue && WheelOneValue == WheelThreeValue:
-		moneyValue += WeightValues[WheelOneValue-1]
-		hiddenBank -= WeightValues[WheelOneValue-1]
-		$Win.text="+$"+str(WeightValues[WheelOneValue-1])
+		moneyValue += WeightValues[WheelOneValue-1]*Credit
+		hiddenBank -= WeightValues[WheelOneValue-1]*Credit
+		$Win.text="+$"+str((WeightValues[WheelOneValue-1]-1)*Credit)
 		$Win.set("theme_override_colors/font_color", Color(0, 1, 0))
 	else:
-		$Win.text="-$10"
+		$Win.text="-$"+str(Credit)
 		$Win.set("theme_override_colors/font_color", Color(1, 0, 0))
 	$HiddenBank.text = str(hiddenBank)
 	$MoneyLabel.text = "$"+str(moneyValue)
@@ -97,3 +101,15 @@ func _on_Wheel2_timer_timeout():
 func _on_Wheel1_timer_timeout():
 	$Wheel1/AnimatedSprite2D.stop()
 	$Wheel1/AnimatedSprite2D.frame=IconFrames[WheelOneValue-1]
+
+	
+func _on_plus_credits_pressed():
+	if Credit <= 990:
+		Credit+=10
+		$Credits.text = "$"+str(Credit)
+
+
+func _on_minus_credits_pressed():
+	if Credit > 10:
+		Credit-=10
+		$Credits.text = "$"+str(Credit)
