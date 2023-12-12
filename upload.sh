@@ -1,3 +1,4 @@
 #!/bin/bash
-zip -r web.zip web
-../butler.exe push "C:\Godot\Slots\web.zip" datimekeeper/slots:web
+zip -r slots.zip web
+../butler.exe push "C:\Godot\Slots\slots.zip" datimekeeper/slots:web
+../butler.exe push "C:\Godot\Slots\slots.exe" datimekeeper/slots:win
