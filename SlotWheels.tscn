@@ -346,7 +346,7 @@ grow_vertical = 2
 position = Vector2(-410, 5)
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_043vx")
-animation = &"Random_Spin"
+animation = &"spin"
 
 [node name="Timer" type="Timer" parent="Wheel1"]
 wait_time = 0.5

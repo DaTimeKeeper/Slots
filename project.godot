@@ -14,3 +14,8 @@ config/name="Slots"
 run/main_scene="res://SlotWheels.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
