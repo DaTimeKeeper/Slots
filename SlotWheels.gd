@@ -12,7 +12,9 @@ var moneyValue=1000
 
 var WeightValues = [2,4,2,4,8,10,30,100]
 
-var IconFrames = [2,0,14,12,10,8,6,4]
+var IconFrames1 = [0,14,12,10,8,6,4,2]#Cherry->Diamond->Seven->Bar->Melon->Bell->Strawberry->Lemon->Cherry
+var IconFrames2 = [0,12,8,4,10,14,2,6] #Cherry->Seven->Bell->Diamond->Strawberry->Melon->Lemon->Bar->Cherry
+var IconFrames3 = [0,2,4,6,8,10,12,14] #Cherry->Lemon->Strawberry->Bell->Melon->Bar->Seven->Diamond->Cherry
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -41,7 +43,8 @@ func SpinSecondWheel():
 	WheelTwoValue =  RandomSymbolExcludeWheelOne()
 	
 func SpinThirdWheel():
-	var weigtedBank=(hiddenBank/(WeightValues[WheelOneValue-1]*Credit))*100
+	var weigtedBank=(float(hiddenBank)/(WeightValues[WheelOneValue-1]*Credit))*100
+	$WinPercent.text=str(weigtedBank)
 	var winRoll = rng.randi_range(1,100)
 	if winRoll<=weigtedBank || rng.randi_range(1,100)<=10:
 		WheelThreeValue = WheelOneValue
@@ -67,9 +70,9 @@ func _on_button_pressed():
 		$HiddenBank.text = str(hiddenBank)
 		$Wheel1/AnimatedSprite2D.play("spin")
 		$Wheel1/Timer.start()
-		$Wheel2/AnimatedSprite2D.play("spin")
+		$Wheel2/AnimatedSprite2D.play("Random_Spin")
 		$Wheel2/Timer.start()
-		$Wheel3/AnimatedSprite2D.play("spin")
+		$Wheel3/AnimatedSprite2D.play("Backward")
 		$Wheel3/Timer.start()
 		SpinWheels()
 
@@ -82,7 +85,7 @@ func _on_reset_button_pressed():
 	
 func _on_Wheel3_timer_timeout():
 	$Wheel3/AnimatedSprite2D.stop()
-	$Wheel3/AnimatedSprite2D.frame=IconFrames[WheelThreeValue-1]
+	$Wheel3/AnimatedSprite2D.frame=IconFrames3[WheelThreeValue-1]
 	if WheelOneValue == WheelTwoValue && WheelOneValue == WheelThreeValue:
 		moneyValue += WeightValues[WheelOneValue-1]*Credit
 		hiddenBank -= WeightValues[WheelOneValue-1]*Credit
@@ -96,11 +99,11 @@ func _on_Wheel3_timer_timeout():
 
 func _on_Wheel2_timer_timeout():
 	$Wheel2/AnimatedSprite2D.stop()
-	$Wheel2/AnimatedSprite2D.frame=IconFrames[WheelTwoValue-1]
+	$Wheel2/AnimatedSprite2D.frame=IconFrames2[WheelTwoValue-1]
 
 func _on_Wheel1_timer_timeout():
 	$Wheel1/AnimatedSprite2D.stop()
-	$Wheel1/AnimatedSprite2D.frame=IconFrames[WheelOneValue-1]
+	$Wheel1/AnimatedSprite2D.frame=IconFrames1[WheelOneValue-1]
 
 	
 func _on_plus_credits_pressed():

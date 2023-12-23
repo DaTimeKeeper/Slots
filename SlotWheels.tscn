@@ -1,25 +1,232 @@
-[gd_scene load_steps=19 format=3 uid="uid://hkrke5jkvwdh"]
+[gd_scene load_steps=67 format=3 uid="uid://hkrke5jkvwdh"]
 
 [ext_resource type="Texture2D" uid="uid://svehdt5y4jtg" path="res://Dream 1/frame_37.png" id="1_ju36u"]
 [ext_resource type="Script" path="res://SlotWheels.gd" id="1_owa85"]
 [ext_resource type="Texture2D" uid="uid://eoujhflbpmjv" path="res://Dream 1/frame_34.png" id="2_2yxy1"]
+[ext_resource type="Texture2D" uid="uid://cmufr8bwd6k24" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin2.png" id="2_8woht"]
+[ext_resource type="Texture2D" uid="uid://dgv3niq3exrtd" path="res://imgs/base/NewAnimation/Random/RandomSlots1.png" id="2_bpb75"]
 [ext_resource type="Texture2D" uid="uid://d1omhmj8ctjm6" path="res://Dream 1/frame_31.png" id="3_5r678"]
+[ext_resource type="Texture2D" uid="uid://b4f8utlldxboe" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin3.png" id="3_nynh7"]
+[ext_resource type="Texture2D" uid="uid://bysvx3x4bmtje" path="res://imgs/base/NewAnimation/Random/RandomSlots2.png" id="3_tinw1"]
+[ext_resource type="Texture2D" uid="uid://dvmcrxlt2ef86" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin4.png" id="4_3cm1q"]
+[ext_resource type="Texture2D" uid="uid://cqtuj3rm2yjku" path="res://imgs/base/NewAnimation/Random/RandomSlots3.png" id="4_e36rc"]
 [ext_resource type="Texture2D" uid="uid://v7u76wbr4vdu" path="res://Dream 1/frame_28.png" id="4_i8qdy"]
+[ext_resource type="Texture2D" uid="uid://kqcw6wxya3hq" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin5.png" id="5_j7jgm"]
 [ext_resource type="Texture2D" uid="uid://dsggyobmf5uno" path="res://Dream 1/frame_25.png" id="5_jv61x"]
+[ext_resource type="Texture2D" uid="uid://b2j7w1wwgyoun" path="res://imgs/base/NewAnimation/Random/RandomSlots4.png" id="5_m56w8"]
+[ext_resource type="Texture2D" uid="uid://deampgmp85fac" path="res://imgs/base/NewAnimation/Random/RandomSlots5.png" id="6_sw6sn"]
 [ext_resource type="Texture2D" uid="uid://xy4j8qriyqrw" path="res://Dream 1/frame_22.png" id="6_w5la5"]
+[ext_resource type="Texture2D" uid="uid://fvyevv40vstq" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin6.png" id="6_yd27h"]
+[ext_resource type="Texture2D" uid="uid://csdnlhgyuy51g" path="res://imgs/base/NewAnimation/Random/RandomSlots6.png" id="7_n0qyf"]
+[ext_resource type="Texture2D" uid="uid://bfta20lfcac4m" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin7.png" id="7_ocd46"]
 [ext_resource type="Texture2D" uid="uid://dybn806t1q0au" path="res://Dream 1/frame_21.png" id="7_y2b2m"]
 [ext_resource type="Texture2D" uid="uid://dqjoeihtay6yc" path="res://Dream 1/frame_16.png" id="8_e6fe1"]
+[ext_resource type="Texture2D" uid="uid://doaq873hhbcug" path="res://imgs/base/NewAnimation/Random/RandomSlots7.png" id="8_hd72q"]
+[ext_resource type="Texture2D" uid="uid://cwbg4vcjuny6r" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin8.png" id="8_uyp81"]
+[ext_resource type="Texture2D" uid="uid://5jneausnrcfd" path="res://imgs/base/NewAnimation/Random/RandomSlots8.png" id="9_07rtb"]
 [ext_resource type="Texture2D" uid="uid://dtiiqkx8621qe" path="res://Dream 1/frame_13.png" id="9_l1nw8"]
+[ext_resource type="Texture2D" uid="uid://dv4hmgisywhjj" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin9.png" id="9_uyijf"]
+[ext_resource type="Texture2D" uid="uid://cpot01n2v2vs5" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin10.png" id="10_6vful"]
 [ext_resource type="Texture2D" uid="uid://dv14fhtcnv2q4" path="res://Dream 1/frame_10.png" id="10_d3w5l"]
+[ext_resource type="Texture2D" uid="uid://2mp27e1smkyk" path="res://imgs/base/NewAnimation/Random/RandomSlots9.png" id="10_wt2ki"]
+[ext_resource type="Texture2D" uid="uid://bm7ct6xp482f0" path="res://imgs/base/NewAnimation/Random/RandomSlots10.png" id="11_efqfo"]
 [ext_resource type="Texture2D" uid="uid://cbtmisha1ypdh" path="res://Dream 1/frame_07.png" id="11_lxry3"]
+[ext_resource type="Texture2D" uid="uid://cwm30pib1oxkl" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin11.png" id="11_p2tk2"]
 [ext_resource type="Texture2D" uid="uid://bnbdr71wv0yuu" path="res://Dream 1/frame_04.png" id="12_2i5ir"]
+[ext_resource type="Texture2D" uid="uid://dkrfwo47lh1rc" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin12.png" id="12_7myrm"]
+[ext_resource type="Texture2D" uid="uid://b60fi2akxqjkv" path="res://imgs/base/NewAnimation/Random/RandomSlots11.png" id="12_o4f2l"]
+[ext_resource type="Texture2D" uid="uid://b6usuut0cd1sr" path="res://imgs/base/NewAnimation/Random/RandomSlots12.png" id="13_2p210"]
+[ext_resource type="Texture2D" uid="uid://b0xeybrokrvr6" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin13.png" id="13_3xeb7"]
 [ext_resource type="Texture2D" uid="uid://dwkbffn6v2uu5" path="res://Dream 1/frame_01.png" id="13_ysx8d"]
+[ext_resource type="Texture2D" uid="uid://8l6sqydxkx14" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin14.png" id="14_ngv40"]
+[ext_resource type="Texture2D" uid="uid://c0ma8riqyrxn8" path="res://imgs/base/NewAnimation/Random/RandomSlots13.png" id="14_sa5p0"]
 [ext_resource type="Texture2D" uid="uid://0nljisg2k6bs" path="res://Dream 1/frame_46.png" id="14_x2mjy"]
 [ext_resource type="Texture2D" uid="uid://cp2bjgx8pftsa" path="res://Dream 1/frame_43.png" id="15_7mnw8"]
+[ext_resource type="Texture2D" uid="uid://bjacbabvbk8yp" path="res://imgs/base/NewAnimation/Random/RandomSlots14.png" id="15_8cmmc"]
+[ext_resource type="Texture2D" uid="uid://crabypx167j02" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin15.png" id="15_h3s5x"]
 [ext_resource type="Texture2D" uid="uid://cbu6im52tmteb" path="res://Dream 1/frame_40.png" id="16_62jab"]
+[ext_resource type="Texture2D" uid="uid://csf2udlm6vt0j" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin16.png" id="16_e5nyv"]
+[ext_resource type="Texture2D" uid="uid://c0e725v6a3ohs" path="res://imgs/base/NewAnimation/Random/RandomSlots15.png" id="16_qu8wh"]
+[ext_resource type="Texture2D" uid="uid://4r4hwyvfu2ba" path="res://imgs/base/NewAnimation/Backward/BackwardsSpin1.png" id="17_ec3si"]
+[ext_resource type="Texture2D" uid="uid://cdj8adb22y0wa" path="res://imgs/base/NewAnimation/Random/RandomSlots16.png" id="17_gh7ea"]
+[ext_resource type="Texture2D" uid="uid://bkk6b3qwn4hj" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation1.png" id="18_ncvbd"]
+[ext_resource type="Texture2D" uid="uid://1xtb2p7v77xh" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation2.png" id="19_1b3gf"]
+[ext_resource type="Texture2D" uid="uid://b66qra6nmg6yw" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation3.png" id="20_ox2xq"]
+[ext_resource type="Texture2D" uid="uid://n8q0c1flbpur" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation4.png" id="21_oqgt3"]
+[ext_resource type="Texture2D" uid="uid://js7e8pfi4i3k" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation5.png" id="22_cey1d"]
+[ext_resource type="Texture2D" uid="uid://dailgram1q2ca" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation6.png" id="23_cfxm3"]
+[ext_resource type="Texture2D" uid="uid://bdnkuhywiww6o" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation7.png" id="24_4hei5"]
+[ext_resource type="Texture2D" uid="uid://djbv1fsb3vri3" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation8.png" id="25_3r7gg"]
+[ext_resource type="Texture2D" uid="uid://cujao5qd6lg64" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation9.png" id="26_q6nlh"]
+[ext_resource type="Texture2D" uid="uid://dnbldr8ll3xym" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation10.png" id="27_pf0o3"]
+[ext_resource type="Texture2D" uid="uid://swtw551jopp8" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation11.png" id="28_owapu"]
+[ext_resource type="Texture2D" uid="uid://cpokpsrlogvss" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation12.png" id="29_umf43"]
+[ext_resource type="Texture2D" uid="uid://b4wdjsc5e1sns" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation13.png" id="30_djsqr"]
+[ext_resource type="Texture2D" uid="uid://k63x1wrxqkox" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation14.png" id="31_34763"]
+[ext_resource type="Texture2D" uid="uid://d150rjby1h5ch" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation15.png" id="32_8p24n"]
+[ext_resource type="Texture2D" uid="uid://lggkco6qb1vb" path="res://imgs/base/NewAnimation/In Order/NewSlotsAnimation16.png" id="33_cg0c3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_043vx"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8woht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nynh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3cm1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_j7jgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yd27h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ocd46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uyp81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uyijf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6vful")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_p2tk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_7myrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3xeb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ngv40")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_h3s5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_e5nyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ec3si")
+}],
+"loop": true,
+"name": &"Backward",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_gh7ea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bpb75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tinw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_e36rc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_m56w8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sw6sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_n0qyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hd72q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_07rtb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wt2ki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_efqfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_o4f2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_2p210")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_sa5p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8cmmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_qu8wh")
+}],
+"loop": true,
+"name": &"Random_Spin",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_ncvbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1b3gf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ox2xq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_oqgt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cey1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_cfxm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4hei5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3r7gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_q6nlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_pf0o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_owapu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_umf43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_djsqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_34763")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_8p24n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_cg0c3")
+}],
+"loop": true,
+"name": &"spin",
+"speed": 16.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_ju36u")
@@ -70,46 +277,79 @@ animations = [{
 "texture": ExtResource("16_62jab")
 }],
 "loop": true,
-"name": &"spin",
+"name": &"spin1",
 "speed": 16.0
 }]
 
 [node name="Node" type="Node"]
 script = ExtResource("1_owa85")
 
-[node name="Wheel1" type="StaticBody2D" parent="."]
+[node name="Wheel3" type="Container" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wheel1"]
-position = Vector2(146, 310)
-scale = Vector2(0.0731481, 0.151042)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wheel3"]
+position = Vector2(-38, 3)
+scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_043vx")
-animation = &"spin"
+animation = &"Backward"
 
-[node name="Timer" type="Timer" parent="Wheel1"]
-wait_time = 0.5
+[node name="Timer" type="Timer" parent="Wheel3"]
 one_shot = true
 
-[node name="Wheel2" type="StaticBody2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wheel2"]
-position = Vector2(343, 308)
-scale = Vector2(0.0731481, 0.151042)
-sprite_frames = SubResource("SpriteFrames_043vx")
-animation = &"spin"
+[node name="Wheel2" type="Container" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Timer" type="Timer" parent="Wheel2"]
 wait_time = 0.7
 one_shot = true
 
-[node name="Wheel3" type="StaticBody2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wheel3"]
-position = Vector2(544, 310)
-scale = Vector2(0.0731481, 0.151042)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wheel2"]
+position = Vector2(-223, 5)
+scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_043vx")
-animation = &"spin"
+animation = &"Random_Spin"
 
-[node name="Timer" type="Timer" parent="Wheel3"]
+[node name="Wheel1" type="Container" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Wheel1"]
+position = Vector2(-410, 5)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_043vx")
+animation = &"Random_Spin"
+
+[node name="Timer" type="Timer" parent="Wheel1"]
+wait_time = 0.5
 one_shot = true
 
 [node name="Button" type="Button" parent="."]
@@ -127,44 +367,50 @@ grow_vertical = 2
 text = "Spin!"
 
 [node name="MoneyLabel" type="Label" parent="."]
-anchors_preset = -1
-anchor_left = 0.615
-anchor_top = 0.089
-anchor_right = 0.615
-anchor_bottom = 0.089
-offset_left = -60.48
-offset_top = -33.672
-offset_right = 33.52
-offset_bottom = 33.328
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 63.0
+offset_top = -294.0
+offset_right = 157.0
+offset_bottom = -227.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/font_size = 48
 text = "$0"
 horizontal_alignment = 2
 
 [node name="HiddenBank" type="Label" parent="."]
-anchors_preset = -1
-anchor_left = 0.635
-anchor_top = 0.234
-anchor_right = 0.635
-anchor_bottom = 0.234
-offset_left = 336.48
-offset_top = 434.368
-offset_right = 376.48
-offset_bottom = 501.368
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 606.0
+offset_top = 251.0
+offset_right = 646.0
+offset_bottom = 318.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 1, 1)
 theme_override_font_sizes/font_size = 48
 text = "0
 "
 
 [node name="Win" type="Label" parent="."]
-anchors_preset = -1
-anchor_left = 0.63
-anchor_top = 0.174
-anchor_right = 0.637
-anchor_bottom = 0.174
-offset_left = -72.7601
-offset_top = -16.752
-offset_right = 11.176
-offset_bottom = 50.248
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 84.0
+offset_top = -218.0
+offset_right = 167.936
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 48
 horizontal_alignment = 2
@@ -221,9 +467,25 @@ offset_bottom = 16.5
 grow_vertical = 2
 text = "-"
 
-[connection signal="timeout" from="Wheel1/Timer" to="." method="_on_Wheel1_timer_timeout"]
-[connection signal="timeout" from="Wheel2/Timer" to="." method="_on_Wheel2_timer_timeout"]
+[node name="WinPercent" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 602.0
+offset_top = 195.0
+offset_right = 679.0
+offset_bottom = 262.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.870588, 0.533333, 0.384314, 1)
+theme_override_font_sizes/font_size = 48
+text = "0"
+
 [connection signal="timeout" from="Wheel3/Timer" to="." method="_on_Wheel3_timer_timeout"]
+[connection signal="timeout" from="Wheel2/Timer" to="." method="_on_Wheel2_timer_timeout"]
+[connection signal="timeout" from="Wheel1/Timer" to="." method="_on_Wheel1_timer_timeout"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ResetButton" to="." method="_on_reset_button_pressed"]
 [connection signal="pressed" from="Credits/PlusCredits" to="." method="_on_plus_credits_pressed"]
